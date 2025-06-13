@@ -64,6 +64,13 @@ async function generate(message: string) {
   error.innerHTML = '';
   error.toggleAttribute('hidden', true);
 
+  // Adiciona mensagem de loading
+  const loadingDiv = document.createElement('div');
+  loadingDiv.className = 'loading-message';
+  loadingDiv.innerHTML = '🐱 Gerando gatinhos...';
+  slideshow.appendChild(loadingDiv);
+  slideshow.removeAttribute('hidden');
+
   try {
     const userTurn = document.createElement('div') as HTMLDivElement;
     userTurn.innerHTML = await marked.parse(message);
@@ -97,6 +104,11 @@ async function generate(message: string) {
             }
           }
           if (text && img) {
+            // Remove mensagem de loading na primeira imagem
+            const loadingMsg = slideshow.querySelector('.loading-message');
+            if (loadingMsg) {
+              loadingMsg.remove();
+            }
             await addSlide(text, img);
             slideshow.removeAttribute('hidden');
             text = '';
@@ -112,7 +124,7 @@ async function generate(message: string) {
     }
   } catch (e) {
     const msg = parseError(e);
-    error.innerHTML = `Something went wrong: ${msg}`;
+    error.innerHTML = `Algo deu errado: ${msg}`;
     error.removeAttribute('hidden');
   }
   userInput.disabled = false;
