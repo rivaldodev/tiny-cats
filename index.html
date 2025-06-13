@@ -5,13 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Explique Tudo com Muitos Gatinhos</title>
   <link rel="stylesheet" href="/index.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
 </head>
 <body>
 <script type="importmap">
   {
     "imports": {
       "@google/genai": "https://esm.sh/@google/genai@^0.7.0",
-      "marked": "https://esm.sh/marked@^15.0.7"
+      "marked": "https://esm.sh/marked@^15.0.7",
+      "jszip": "https://esm.sh/jszip@^3.10.1"
     }
   }
 </script>
@@ -28,6 +30,7 @@
   <div id="output"></div>
   <div id="error" hidden></div>
   <div id="slideshow" hidden></div>
+  <button id="downloadBtn" class="download-btn">📥 Baixar Todos os Cards</button>
   <footer class="footer">
     <p>Criado por RIvs</p>
   </footer>
