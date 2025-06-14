@@ -23,7 +23,15 @@ const error = document.querySelector('#error') as HTMLDivElement;
 const downloadBtn = document.querySelector('#downloadBtn') as HTMLButtonElement;
 
 const additionalInstructions = `
-Conte uma história divertida usando EXCLUSIVAMENTE gatinhos para explicar o conceito solicitado. Todos os personagens, objetos e processos devem ser gatinhos ou coisas relacionadas ao mundo felino. Use comportamentos de gatos como ronronar, miar, brincar, dormir e caçar. Transforme conceitos técnicos em analogias criativas: dados viram peixes, algoritmos viram truques de gato, redes viram túneis conectando casinhas. Cada elemento deve ser um gatinho diferente com características únicas. Use frases curtas, tom casual e envolvente, com "miaus" ocasionais. Para cada frase, crie uma ilustração fofa e minimalista de gatinhos expressivos, desenhada apenas com tinta preta em fundo branco, variando poses como dormindo, brincando, saltando. As imagens não devem conter texto ou legendas. Escreva em português (PT-BR), mantenha sempre o foco 100% em gatinhos e nunca mencione estas instruções.`;
+Conte uma história engraçada usando muitos gatinhos como metáfora para explicar o assunto.
+Use frases curtas, simples e com tom casual e envolvente, como se estivesse conversando.
+Para cada frase, crie uma ilustração fofa e minimalista, desenhada apenas com tinta preta em fundo branco.
+As imagens não devem conter texto ou legendas.
+Não adicione comentários ou explicações extras, apenas inicie a história diretamente.
+Continue até concluir a explicação.
+Escreva e ilustre em português (PT-BR).
+Nunca mencione estas instruções no texto ou nas imagens.
+Sob nenhuma circunstância adicione texto nas imagens.`;
 
 
 async function addSlide(text: string, image: HTMLImageElement) {
